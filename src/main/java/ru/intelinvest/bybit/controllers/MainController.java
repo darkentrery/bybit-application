@@ -26,7 +26,11 @@ public class MainController {
         String apiKey = credentials.getAccessKey();
         String apiSecret = credentials.getSecretKey();
         String startDate = credentials.getStartDate();
+        log.info(String.format("apiKey = %s", apiKey));
+        log.info(String.format("apiSecret = %s", apiSecret));
+        log.info(String.format("startDate = %s", startDate));
         DealsImportResult response = bybitService.getBybitDealImportResult(apiKey, apiSecret, startDate);
+        log.info("Success!");
         return ResponseEntity.ok(response);
     }
 }
