@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("status")
 public class StatusController {
     @GetMapping()
-    public ResponseEntity<Void> status() {
+    public ResponseEntity<String> status() {
         log.info("Get status!");
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok("BY_BIT");
     }
 }
