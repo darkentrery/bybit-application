@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping("status")
+@RequestMapping("/status")
 public class StatusController {
     @GetMapping()
     public ResponseEntity<String> status() {
